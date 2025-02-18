@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22D4FD;
+
+    --fuente-montserrat: "Montserrat", serif;
+    --fuente-krona: "Krona One", serif;
+    --color-hovar: #272727;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display:flex;
+    gap: 80px;
+ 
+}
+
+.header__menu__link{
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+
+.presentacion{
+    padding: 3% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion__contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque{
+    color:var(--color-terciario);
+}
+
+.presentacion__contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+.presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid #22D4FD; /*se agrega tamaño, tipo y color en esta propiedad*/ 
+    display: flex;    /*se llama a flexbox para estilizar los botones*/
+    justify-content: center; /*en eje horizontal se utiliza justify-content*/
+    gap: 10px; /*separa la imagen de la palabra en el botón*/
+}
+
+.presentacion__enlaces__link:hover{ /*se cambiará color del botón al pasar el cursor por encima, agregando :hover*/
+    background-color:var(--color-hovar);
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color:var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media(max-width:1200px){
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width:auto;
+        }
+    .header{
+        padding: 10%;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+
+}
